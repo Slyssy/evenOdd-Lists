@@ -1,6 +1,8 @@
 let usersWord = '';
-let oddList = document.querySelector('#odd');
-let evenList = document.querySelector('#even');
+const oddList = document.querySelector('#odd');
+const evenList = document.querySelector('#even');
+const submit = document.querySelector('#submit');
+const input = document.querySelector('#word');
 
 //? create a function that will update this variable when the user types in.
 function updateWord(element) {
@@ -24,3 +26,10 @@ function handleSubmit() {
   usersWord = '';
   document.getElementById('even-odd-form').reset();
 }
+
+word.addEventListener('keypress', (e) => {
+  if (e.key === 'Enter') {
+    e.preventDefault();
+    submit.click();
+  }
+});
