@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*# Color Pallette */
+:root {
+  --black: #070707ca;
+  --oxford-blue: #14213dff;
+  --orange-web: #fca311ff;
+  --platinum: #e5e5e5ff;
+  --white: #ffffffff;
+}
+/* *Page Styling Mobile First */
+body {
+  background-color: var(--oxford-blue);
+}
+form {
+  grid-column: span 2;
+  align-self: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 40px 40px;
+  justify-items: center;
+  column-gap: 0.5em;
+  row-gap: 2em;
+  background-color: var(--oxford-blue);
+  align-items: center;
+  width: 100%;
+}
+
+h1 {
+  grid-column: span 2;
+  color: var(--orange-web);
+  padding: 25px;
+}
+
+input {
+  font-size: 16px;
+  border-radius: 5px;
+  padding: 0.5em 1em;
+}
+
+label {
+  color: var(--platinum);
+  font-size: 20px;
+}
+
+section {
+  grid-column: span 2;
+  background-color: var(--platinum);
+  width: 90%;
+  text-align: center;
+  padding: 0.5em;
+  border-radius: 10px;
+  color: var(--black);
+}
+
+.button {
+  background-color: var(--orange-web);
+  color: var(--white);
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all ease-in-out 0.2s;
+}
+
+.button:hover {
+  font-size: 20px;
+}
+
+.button:active {
+  font-size: 18px;
+}
+
+.page-container {
+  font-family: 'Poppins', sans-serif;
+  width: 95%;
+  margin: 0px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 15% 35% 25% 25%;
+  justify-items: center;
+  column-gap: 0.25em;
+  row-gap: 1em;
+  background-color: var(--oxford-blue);
+  height: 100vh;
+  padding-bottom: 32px;
+  max-width: 1200px;
+  max-height: 1000px;
+}
+
+.submit-button {
+  grid-column: span 2;
+}
+
+.user-input {
+  grid-column: span 2;
+  width: 100%;
+  /* height: 20px;
+  display: flex;
+  justify-content: space-around; */
+}
+
+/*! Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  body {
+    height: 100vh;
+    position: relative;
+  }
+
+  form {
+    grid-template-rows: 100px 100px;
+  }
+
+  h1 {
+    color: var(--orange-web);
+    font-size: 42px;
+  }
+
+  input {
+    font-size: 26px;
+  }
+
+  label {
+    font-size: 34px;
+  }
+
+  section {
+    grid-column: span 1;
+  }
+  .button {
+    font-size: 24px;
+  }
+
+  .button:hover {
+    font-size: 26px;
+  }
+
+  .button:active {
+    font-size: 24px;
+  }
+
+  .page-container {
+    grid-template-rows: 15% 35% 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+}
