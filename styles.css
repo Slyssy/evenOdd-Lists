@@ -21,30 +21,32 @@ form {
   align-self: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 40px 40px;
+  grid-template-rows: auto auto;
   justify-items: center;
   column-gap: 0.5em;
-  row-gap: 2em;
+  row-gap: 20%;
   background-color: var(--oxford-blue);
   align-items: center;
   width: 100%;
 }
 
 h1 {
+  /* font-size: ; */
   grid-column: span 2;
   color: var(--orange-web);
-  padding: 25px;
+  padding: 5vh;
+  align-self: center;
 }
 
 input {
-  font-size: 16px;
+  font-size: 80%;
   border-radius: 5px;
   padding: 0.5em 1em;
 }
 
 label {
   color: var(--platinum);
-  font-size: 20px;
+  font-size: 100%;
 }
 
 section {
@@ -60,7 +62,7 @@ section {
 .button {
   background-color: var(--orange-web);
   color: var(--white);
-  font-size: 18px;
+  font-size: 80%;
   border-radius: 10px;
   cursor: pointer;
   transition: all ease-in-out 0.2s;
@@ -85,7 +87,7 @@ section {
   margin: 0px auto;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: 10% 20% 23% 23% 9%;
+  grid-template-rows: 10% 15% 23% 23% 9%;
   justify-items: center;
   column-gap: 0.25em;
   row-gap: 1em;
@@ -115,27 +117,29 @@ section {
   }
 
   form {
-    grid-template-rows: 100px 100px;
+    /* grid-template-rows: 100px 100px; */
   }
 
   h1 {
     color: var(--orange-web);
     font-size: 42px;
+    align-self: start;
   }
 
   input {
-    font-size: 26px;
+    font-size: 140%;
   }
 
   label {
-    font-size: 34px;
+    font-size: 180%;
+    /* justify-self: end; */
   }
 
   section {
     grid-column: span 1;
   }
   .button {
-    font-size: 24px;
+    font-size: 100%;
   }
 
   .button:hover {
@@ -160,7 +164,7 @@ section {
 /** Large devices (laptops/desktops, 992px and up) */
 @media only screen and (min-width: 992px) {
   .page-container {
-    -ms-transform: translate(-50%, -60%);
-    transform: translate(-50%, -60%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
   }
 }
