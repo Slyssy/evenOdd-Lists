@@ -3,6 +3,7 @@ const oddList = document.querySelector('#odd');
 const evenList = document.querySelector('#even');
 const submit = document.querySelector('#submit');
 const input = document.querySelector('#word');
+// const word = document.querySelector('li');
 
 //? create a function that will update this variable when the user types in.
 function updateWord(element) {
@@ -19,8 +20,10 @@ function handleSubmit() {
 
   if (usersWord.length % 2 === 0) {
     evenList.appendChild(newListItem);
+    document.querySelector('li').style.color = 'green';
   } else {
     oddList.appendChild(newListItem);
+    document.querySelector('li').style.color = 'red';
   }
 
   usersWord = '';
